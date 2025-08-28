@@ -1,0 +1,606 @@
+/*universal style*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*CSS variable*/
+:root {
+  --primary: #41E088;         /* Main primary brand color (buttons, accents, status indicators) */
+  --primary-2: #A0F0C4;       /* Lighter shade of primary (hover states, soft backgrounds) */
+  --primary-3: #D9F9E7;       /* Very light shade of primary, suitable for links or backgrounds */
+  --secondary: #41C4E0;       /* Main secondary brand color (tabs, buttons, highlights) */
+  --secondary-2: #7AD6E9;     /* Lighter shade of secondary (hover states or soft highlights) */
+  --secondary-3: #CDEDF6;     /* Very light secondary, used for background highlights */
+  --text-dark: #000000;       /* Main body text */
+  --text2: #adabab;           /* Secondary text (placeholders, muted labels, timestamps) */
+  --text-red: #CB3939;        /* Error messages, alerts, or status indicators */
+  --background: #FDFDFD;      /* Default page background */
+  --white: #FFFFFF;           /* White backgrounds, cards, containers */
+  --accent: #EDFDFC;          /* Accent background (very light background or UI highlight) */
+  --warning:#CD6200;
+  --success:#1F9254; 
+}
+
+body {
+  font-family: "Manrope";
+  background-color: var(--background);
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+}
+
+/*HEADER*/
+header img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  height: 24px;
+  width: auto;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  z-index: 2; /* keeps it above the menu */
+  margin: 10px;
+}
+
+.hamburger span {
+  display: none;
+  width: 100%;
+  height: 4px;
+  background: black;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.4s ease;
+}
+
+/* Transform to X when checked */
+#menu-toggle:checked + .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-menu {
+  top: 60px;
+  left: 0;
+  background: var(--white);
+  padding: 10px;
+  z-index: 20;
+  font-size: 20px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-menu li {
+  z-index: 2;
+  align-items: center;
+  margin-left:10px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+}
+
+.nav-menu ul li a {
+  color: var(--text-dark);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color:var(--primary);
+}
+
+/* Show menu when checked */
+#menu-toggle:checked ~ .nav-menu {
+  display: block;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+/* Hero Section */
+.hero {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: slideInLeft 0.8s ease-out both;
+}
+
+.doctor-img {
+  width: 319.41px;
+  height: 377px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+.doctor-text strong {
+  font-size: 32px;
+}
+
+.doctor-text p {
+  font-size: 24px;
+}
+
+.ratings span:first-child {
+  font-size: 24px;
+  color: #ffc107;
+}
+
+/* Form Section */
+form {
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+
+
+/* Date & Slots */
+section > h3 {
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+section > p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+section div {
+  margin-bottom: 20px;
+  margin-left: 20px; ;
+}
+
+section h3 {
+  font-size: 40px;
+  margin-left:20px ;
+}
+
+.date-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.date-switcher p {
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0;
+}
+
+.arrow-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  color:var(--text-dark);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.arrow-btn:hover {
+  transform: scale(1.2);
+}
+
+
+button {
+  padding: 20px 30px;
+  margin: 5px;
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  max-width: 165px;
+}
+
+button:hover {
+  background-color: var(--secondary-3);
+}
+
+.date-btn button.active {
+  background-color: var(--primary-3);
+  font-weight: bold;
+}
+
+.time-btns button.selected {
+  background-color: var(--primary-3);
+  font-weight: bold;
+}
+
+.date-btn button.disabled {
+  background-color: #ccc;
+  color: #777;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.date-btn {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap
+}
+
+h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  margin-left: 20px;
+}
+
+/* Preferences */
+.preference {
+  background-color: var(--accent);
+}
+
+.preference h3 {
+  text-align: center;
+}
+
+.preference-options label {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.preference-options {
+  margin-left: 42px;
+  flex-wrap: wrap
+}
+
+.preference-options input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Checkmark styling */
+.preference-options input[type="checkbox"]:checked::after {
+  content: '✔';
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+}
+  
+/* Background when checked */
+.preference-options input[type="checkbox"]:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.preference-options text {
+  text-align: center;
+}
+
+
+/* Payment Section */
+.totals {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.totals h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#total {
+  font-size: 20px;
+  color: var(--text-dark);
+  border: 2px solid var(--primary);  
+  background-color: var(--white);
+  border-radius: 6px;
+  display: block;         
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;            
+  max-width: 100%;
+  box-sizing: border-box; 
+  padding: 10px 12px;
+  text-align: start; 
+}
+
+.totals button {
+  margin: 15px auto 0;
+ width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+  padding: 12px;
+  background-color: #28a745;
+  max-width: 100%;
+  display: block;
+  color: var(--white);
+}
+
+.totals button:hover {
+  background-color: #218838;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  padding: 2rem 1.25rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 0 auto 1rem;
+  max-width: 1100px;
+}
+
+.footer img {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.Col1 p {
+  font-size: 1.2rem;
+}
+
+.Col1 span {
+  font-size: 1rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.flex-container h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.flex-container li {
+  list-style: none;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  transition: transform 0.18s ease;
+}
+
+.flex-container li:hover {
+  transform: translateX(4px);
+}
+
+/* Bottom Footer Row */
+.copyright-socials-grp {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer-social img {
+  display: block;
+  transition: transform 0.25s ease;
+  background: var(--primary);
+}
+
+.footer-social img:hover {
+  transform: scale(1.08);
+}
+
+.copyright-p {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Animation */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+    display: inline-block;
+}
+
+.hamburger span {
+  display: block;
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: var(--primary-3);
+}
+
+.nav-menu li {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+
+.nav-menu ul {
+  flex-direction: column;
+  transition: max-height 0.3s ease;
+}
+
+ header h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+.date-switcher p {
+  font-size: 30px;
+}
+
+section h3 {
+  font-size: 32px;
+}
+
+.ratings span:first-child {
+  font-size: 12px;
+}
+}
+
+@media (max-width: 600px) {
+
+  header h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section div {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  }
+
+  .doctor-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  button {
+    font-size: 13px;
+    min-width: 48px;
+  }
+
+  .totals button {
+    font-size: 14px;
+  }
+
+
+.date-switcher p {
+  font-size: 20px;
+}
+
+section h3 {
+  font-size: 25px;
+}
+
+.date-switcher {
+  gap: 0px;
+}
+
+.arrow-btn {
+  padding: 0%;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+form {
+  margin-left: 0px;
+}
+
+section div {
+  margin-left: 0px;
+}
+}
+
+@media (mini-width: 375px) {
+  header h1 {
+    font-size: 17px;
+    text-align: center;
+  }
+}

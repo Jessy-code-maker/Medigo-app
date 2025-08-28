@@ -1,0 +1,399 @@
+/*universal style*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*CSS variable*/
+:root {
+  --primary: #41E088;
+  /* Main primary brand color (buttons, accents, status indicators) */
+  --primary-2: #A0F0C4;
+  /* Lighter shade of primary (hover states, soft backgrounds) */
+  --primary-3: #D9F9E7;
+  /* Very light shade of primary, suitable for links or backgrounds */
+  --secondary: #41C4E0;
+  /* Main secondary brand color (tabs, buttons, highlights) */
+  --secondary-2: #7AD6E9;
+  /* Lighter shade of secondary (hover states or soft highlights) */
+  --secondary-3: #CDEDF6;
+  /* Very light secondary, used for background highlights */
+  --text-dark: #000000;
+  /* Main body text */
+  --text2: #adabab;
+  /* Secondary text (placeholders, muted labels, timestamps) */
+  --text-red: #CB3939;
+  /* Error messages, alerts, or status indicators */
+  --background: #FDFDFD;
+  /* Default page background */
+  --white: #FFFFFF;
+  /* White backgrounds, cards, containers */
+  --accent: #EDFDFC;
+  /* Accent background (very light background or UI highlight) */
+  --warning: #CD6200;
+  --success: #1F9254;
+}
+
+body {
+  font-family: "Manrope";
+  background-color: var(--background);
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+}
+
+/*HEADER*/
+header img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  height: 24px;
+  width: auto;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  z-index: 2;
+  /* keeps it above the menu */
+  margin: 10px;
+}
+
+.hamburger span {
+  display: none;
+  width: 100%;
+  height: 4px;
+  background: black;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.4s ease;
+}
+
+/* Transform to X when checked */
+#menu-toggle:checked+.hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked+.hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked+.hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-menu {
+  top: 60px;
+  left: 0;
+  background: var(--white);
+  padding: 10px;
+  z-index: 20;
+  font-size: 20px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 0.9rem;
+}
+
+.nav-menu li {
+  z-index: 2;
+  align-items: center;
+}
+
+.nav-menu a {
+  text-decoration: none;
+}
+
+.nav-menu ul li a {
+  color: var(--text-dark);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: var(--primary);
+}
+
+/* Show menu when checked */
+#menu-toggle:checked~.nav-menu {
+  display: block;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  text-align: center;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  margin-bottom: 1rem;
+  margin: 63px 100px;
+  line-height: 40px;
+}
+
+h2 {
+  margin-top: 2rem;
+  background-color: white;
+  color: black;
+  font-size: 1.4rem;
+}
+
+.faq-section {
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-left: 4px solid #0077b6;
+  border-radius: 8px;
+}
+
+.faq-item strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+/* about.css */
+h2 {
+  text-align: center;
+  color: black;
+  margin-top: 2rem;
+}
+
+/* Card Styling */
+.card {
+  background: #ffffff;
+  margin: 1rem auto;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 1240px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Make strong (question text) stand out */
+.card strong {
+  display: block;
+  font-size: 1.1rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  padding: 2rem 1.25rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 0 auto 1rem;
+  max-width: 1100px;
+}
+
+.footer img {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.Col1 p {
+  font-size: 1.2rem;
+}
+
+.Col1 span {
+  font-size: 1rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.flex-container h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.flex-container li {
+  list-style: none;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  transition: transform 0.18s ease;
+}
+
+.flex-container li:hover {
+  transform: translateX(4px);
+}
+
+/* Bottom Footer Row */
+.copyright-socials-grp {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer-social img {
+  display: block;
+  transition: transform 0.25s ease;
+  background: var(--primary);
+}
+
+.footer-social img:hover {
+  transform: scale(1.08);
+}
+
+.copyright-p {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: inline-block;
+  }
+
+  .hamburger span {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: var(--primary-3);
+  }
+
+  .nav-menu li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    transition: max-height 0.3s ease;
+  }
+}
+
+
+/*  Mobile devices (up to 600px) */
+@media (max-width: 600px) {
+  header {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: 1rem;
+    margin: 0.8rem auto;
+  }
+
+  main p {
+    font-size: 0.95rem;
+  }
+
+  .text {
+  margin: 20px;
+}
+}
+
+/* Tablets (601px – 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  header {
+    font-size: 1.6rem;
+  }
+
+  main {
+    max-width: 750px;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .card {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 426px) {
+  header img {
+  padding: 0 5px 0px 3px;
+}
+
+header h1 {
+  font-size: 25px;
+}
+
+.hamburger {
+ margin: 0px 8px 0px 8px;
+}
+
+}

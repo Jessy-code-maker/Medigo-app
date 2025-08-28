@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>MEDIGO</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+  <link rel='stylesheet' type='text/css' media='screen' href='../CSS/Thealth.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../CSS/home.css'>
+  
+</head>
+<body>
+    <header>
+    <div class="logo"> <img src="../images/logo.png" alt="MediGo Logo" class="logo">
+
+      <input type="checkbox" class="menu-toggle" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger"
+        aria-label="Toggle navigation menu"><span></span><span></span><span></span></label>
+      <!-- Nav menu -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/appoint.html">Book Appointment</a></li>
+          <li><a href="../HTML/Thealth.html">Telehealth</a></li>
+          <li><a href="../HTML/about-us.html">About Us</a></li>
+          <li><a href="../HTML/index.html">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+      <h1>Telehealth</h1>
+  </header> 
+ 
+    <section class="telehealth-hero-image">
+      <img src="../home and tele image/tehealth-image1.png" alt="">
+      <section class="telehealth-hero-text">
+        <h2>24/7 urgent care and online doctors available</h2>
+        <p> Get convenient, high-quality virtual care — from everyday health needs to urgent and mental health support. No waiting rooms, no hassle — just fast, expert care when you need it most.</p>
+        <button class=" btn btn-primary">Get started now</button>
+      </section>
+    </section>
+
+    <div class="how-it-works-div">
+      <h2>How it works</h2>
+
+<div class="carousel-container">
+  <div class="carousel" id="carousel">
+    <!-- Slide 1 -->
+    <section class="slide">
+      <img src="../home and tele image/telehealth-image2.png" alt="Step 1">
+      <section class="how-it-works-txt">
+        <button class="btn-step1">Step 1</button>
+        <h2>Book Appointment</h2>
+        <p>Book your appointment on MediGo in just a few clicks—choose your doctor, pick a time, and get instant confirmation. Stay on track with automated reminders and easy rescheduling options.</p>
+      </section>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide">
+      <img src="../home and tele image/telehealth-image4.png" alt="Step 2">
+      <section class="how-it-works-txt">
+        <button class="btn-step1">Step 2</button>
+        <h2>Share Symptoms</h2>
+        <p>Share your symptoms easily on MediGo to help doctors understand your needs faster. Get accurate guidance and the right care without unnecessary delays.</p>
+      </section>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide">
+      <img src="../home and tele image/telehealth-image5.png" alt="Step 3">
+      <section class="how-it-works-txt">
+        <button class="btn-step1">Step 3</button>
+        <h2>Consult Online</h2>
+        <p>Consult online with MediGo and connect to trusted doctors from the comfort of your home. Get quick, secure, and reliable medical advice anytime you need it.</p>
+      </section>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="slide">
+      <img src="../home and tele image/telehealth-image6.png" alt="Step 4">
+      <section class="how-it-works-txt">
+        <button class="btn-step1">Step 4</button>
+        <h2>Get Prescriptions</h2>
+        <p>Get your prescription instantly on MediGo after consultation. Access medications safely and conveniently without extra clinic visits.</p>
+      </section>
+    </section>
+  </div>
+
+  <!-- Dots below carousel -->
+  <div class="dots-container" id="dots">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+    <span class="dot" onclick="goToSlide(3)"></span>
+  </div>
+</div>
+
+<section class="concerns">
+  <section class="concerns-txt">
+    <h2>We take your concerns seriously</h2>
+    <p>
+      Telehealth consultations with MedIGo are a great way to get care when you need it — especially between visits to your regular GP. Our caring doctors will take the time to understand your condition and provide the right treatment to help you stay well.
+      Your medical information is completely confidential and will never be shared without your permission.
+      Telehealth is a safe and affordable way to manage common health issues from the comfort of home.
+    </p>
+  </section>
+
+  <img src="../home and tele image/telehealth-image3.png" alt="">
+</section>
+
+
+    <section class="frequently-asked-questions">
+      <h2>Frequently <br> Asked Questions</h2>
+
+      <div class="the-question">
+
+        <section class="each-question">
+          <h4 class="questions">What condition can i treat with telehealth? <i class="fas fa-chevron-down toggleIcon"></i> <i class="fas fa-chevron-up toggleIcon"></i></h4>
+          <span class="faqAnswer">You can treat minor illnesses like flu, allergies, skin rashes, and manage chronic conditions such as diabetes and hypertension via telehealth</span>
+        </section>
+        <section class="each-question">
+          <h4 class="questions">How do i prepare for my consultation?<i class="fas fa-chevron-down toggleIcon"></i> <i class="fas fa-chevron-up toggleIcon"></i></h4>
+<span class="faqAnswer">
+  To prepare for your consultation on the MediGo app, ensure you are in a quiet, private space with a stable internet connection. Have your medical history, current medications, and any symptoms written down beforehand. Join the call a few minutes early, and make sure your device’s camera and microphone are working properly. If applicable, keep any recent test results nearby to discuss with your doctor.
+</span>
+        </section>
+        <section class="each-question">
+          <h4 class="questions">Is my privacy protected? <i class="fas fa-chevron-down toggleIcon"></i> <i class="fas fa-chevron-up toggleIcon"></i></h4>
+<span class="faqAnswer">
+  Yes, your privacy is fully protected. All consultations on the MediGo app are encrypted and comply with healthcare privacy regulations. Your medical information is stored securely and will never be shared without your explicit consent. We are committed to keeping your personal and health data confidential at all times.
+</span>
+        </section>
+        <section class="each-question">
+          <h4 class="questions">How do I get a prescription? <i class="fas fa-chevron-down toggleIcon"></i> <i class="fas fa-chevron-up toggleIcon"></i></h4>
+<span class="faqAnswer">
+  After your online consultation, if the doctor determines that a prescription is appropriate, it will be sent to you digitally through the MediGo app. You can download it directly or have it forwarded to your preferred pharmacy for fulfillment. All prescriptions are issued by licensed medical professionals and follow local regulations.
+</span>
+            </span>
+        </section>
+        
+      </div>
+      <button class="btn2">Get started now</button>
+      <p>Need help? <b>Contact Support</b></p>
+    </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="flex-container">
+      <section class="footer Col1">
+        <img src="../images/logo.png" alt="MediGo Logo">
+        <p>MediGo <br><span>"Your One-Stop Health Companion"</span></p>
+      </section>
+
+      <section class="footer Col2">
+        <h3>Popular Features</h3>
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/indexSignUp.html">Book Appointment</a></li>
+          <li><a href="../HTML/indexSignUp.html">Telehealth Services</a></li>
+          <li>Departments & Specialists</li>
+          <li>Contact Us</li>
+        </ul>
+      </section>
+
+      <section class="footer Col3">
+        <h3>About MediGo</h3>
+        <ul>
+          <li><a href="../HTML/about-us.html"></a>FAQ</li>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>Patient Rights</li>
+          <li>Careers</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="copyright-socials-grp">
+      <p class="copyright-p">&copy; 2025 MediGo. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#"><img src="../images/fbook.png" alt="Facebook"></a>
+        <a href="#"><img src="../images/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="../images/linkedIn.png" alt="LinkedIn"></a>
+        <a href="#"><img src="../images/x.png" alt="X"></a>
+      </div>
+    </div>
+  </footer>
+    <script src="../Scripts/Thealth.js"></script>
+</body>
+</html>

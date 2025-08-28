@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express Consultation Request</title>
+  <link rel="stylesheet" href="../CSS/Thealth-2.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo"> <img src="../images/logo.png" alt="MediGo Logo" class="logo">
+
+      <input type="checkbox" class="menu-toggle" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger"
+        aria-label="Toggle navigation menu"><span></span><span></span><span></span></label>
+      <!-- Nav menu -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/appoint.html">Book Appointment</a></li>
+          <li><a href="../HTML/Thealth.html">Telehealth</a></li>
+          <li><a href="../HTML/about-us.html">About Us</a></li>
+          <li><a href="../HTML/index.html">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+      <h1>Express Consultation Request</h1>
+  </header> 
+
+  <!-- Main Content -->
+  <div class="container">
+    <main class="consultation-head">
+      <h1>Express Consultation Request</h1>
+      <h2 id="consult-title">General Medical Consult</h2>
+      <ol>
+        <li>Complete this consultation request.</li>
+        <li>A doctor will call you on the phone number you provide.</li>
+        <li>Prescriptions may be issued by SMS if deemed clinically appropriate. Please note, our doctors will not
+          prescribe any Scheduled or monitored medications.</li>
+        <li>For urgent medical issues, please call our emergency hotline.</li>
+      </ol>
+
+      <!-- Form -->
+      <form action="/submit-consultation" method="POST" enctype="multipart/form-data" class="consultation-form">
+
+        <!-- Medical details -->
+        <label for="reason">Provide any relevant details about your medical problem for the clinician *</label>
+        <textarea id="reason" name="reason" rows="4" placeholder="Describe your symptoms or concerns"
+          required></textarea>
+
+        <!-- Allergies -->
+        <p>Do you have any allergies?*</p>
+        <label><input type="button" name="allergies" value="Yes" required onclick="alert('Please specify your allergies in the details section.')" /></label>
+        <label><input type="button" name="allergies" value="No" required></label>
+
+        <label for="details">If yes, please specify:</label>
+        <textarea id="details" name="details" rows="1" maxlength="100"></textarea>
+
+        <!-- File upload -->
+        <label for="Patient-file">Please upload any supporting documents or images for the clinician to review (Max
+          2MB)</label>
+        <input type="file" id="Patient-file" name="Patient-file" accept=".jpg,.jpeg,.png,.pdf">
+
+        <!-- Patient Details -->
+        <h3>Confirm your details</h3>
+        <label for="firstname">First Name* </label>
+        <input type="text" id="firstname" name="firstname" required placeholder="First Name">
+
+        <label for="lastname">Last Name* </label>
+        <input type="text" id="lastname" name="lastname" required placeholder="Last Name">
+
+        <label for="email">Email </label>
+        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+        <label for="phone">Mobile Number*</label>
+        <input type="tel" id="phone" name="phone" placeholder="+234..." required pattern="[0-9+]{10,14}" maxlength="14">
+
+        <label for="phoneconfirm">Confirm Mobile Number* </label>
+        <input type="tel" id="phoneconfirm" name="phoneconfirm" placeholder="+234..." required pattern="[0-9+]{10,14}"
+          maxlength="14">
+
+        <!-- Consent -->
+
+        <h3>Consent & Declaration</h3>
+        <p>
+          Following your express consent, a clinician will review your information and will call you
+          to discuss appropriate clinical management of your health problem.
+        </p>
+        <p>
+          Prescription medications may only form part of this treatment if considered clinically appropriate.
+        </p>
+        <p>
+          I declare the information provided is true and accurate and consent to the
+          <a href="terms.html">Terms and Conditions</a> and <a href="Policy.html">Privacy Policy</a>.
+        </p>
+
+        <label>
+          <input type="checkbox" id="consent" name="consent" required> I agree
+        </label>
+        <button type="submit" class="submit-button">Proceed to Checkout</button>
+      </form>
+
+    </main>
+  </div>
+</body>
+
+</html>

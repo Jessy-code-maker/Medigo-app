@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/docpro.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Profile</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><img src="../elements/logo.png" alt="logo">
+      <input type="checkbox" class="menu-toggle" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger"
+        aria-label="Toggle navigation menu"><span></span><span></span><span></span></label>
+      <!-- Nav menu -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="../HTML/appoint.html">Book Appointment</a></li>
+          <li><a href="../HTML/Thealth.html">Telehealth</a></li>
+          <li><a href="../HTML/about-us.html">About Us</a></li>
+          <li><a href="../HTML/index.html">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+      <h1>My Profile</h1>
+  </header>
+  <main>
+    <section class="Profile">
+      <div class="container">
+         <div class="profile-container">
+             <img src="../appoint-doctor/doctor.png" alt="Profile Picture" />
+
+             <!-- Display-only info -->
+             <div class="profile-name display-only">
+                <p id="out-name">Dr Kelvin Smith</p>
+                <p id="out-name">Cardiologist specialist</p>
+                <p id="out-name">10years Experience</p>
+          <button class="profile-btn">Edit Profile</button>
+             </div>
+          </div>
+      </div>
+    </section>
+    <section class="features">
+      <h1>Quick Professional Stat</h1>
+      <div class="f-container">
+        <div class="f-1">
+          <h3>Total Patient</h3>
+          <p class="readings">200+</p>
+        </div>
+        <div class="f-2">
+          <h3>Todays Patient</h3>
+          <p class="readings">85</p>
+        </div>
+        <div class="f-3">
+          <h3>Today's Appointments</h3>
+          <p class="readings">100</p>
+        </div>
+        <div class="f-4">
+          <h3> Next Scheduled Appointments</h3>
+          <p class="readings">120</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="upcoming-Appointment">
+      <div class="U-App-Container">
+        <h2>My Scheduled Appointments</h2>
+
+        <div class="U-App-1">
+          <div class="U-App-1-container">
+            <div class="image-holder">
+              <img src="../profile/profile-pic.jpg" alt="doctor Gracia profile-picture">
+            </div>
+            <div class="text-holder">
+              <h3>Mrs. Amaka</h3>
+              <p>Health Check up</p>
+              <p>Online - Video Consultation (45sec) <br>
+                20/08/2025 wednesday, 16:00</p>
+            </div>
+          </div>
+          <div class="U-App-btn-container">
+            <button class="join-btn">Join Consultation</button>
+            <button class="U-App-btn">Reschedule</button>
+            <button class="U-App-btn-cancel">Cancel</button>
+          </div>
+        </div>
+
+        <div class="U-App-2">
+          <div class="U-App-2-container">
+            <div class="image-holder">
+              <img src="../elements/Chinedu.png" alt="doctor Gracia profile-picture">
+            </div>
+            <div class="text-holder">
+              <h3>Chinedu .A</h3>
+              <p>Diabetes</p>
+              <p>Online - Video Consultation (45sec)<br>
+                20/08/2025 wednesday, 16:00</p>
+            </div>
+          </div>
+          <div class="U-App-btn-container">
+            <button class="join-btn">Join Consultation</button>
+            <button class="U-App-btn">Reschedule</button>
+            <button class="U-App-btn-cancel">Cancel</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="Medication">
+      <div class="M-App-Container">
+        <h2>Apppointment Request</h2>
+        <div class="M-1">
+          <img src="../profile/ngozi.png" alt="pill">
+          <div class="M-text-container">
+            <h3>Ngozi Eze</h3>
+            <p> Migraine</p>
+          </div>
+          <div class="insurance-1">
+            <label>
+              <input type="checkbox" class="confirmSubmit">
+            </label>
+          </div>
+  <!-- Close button -->
+  <button class="close-btn" onclick="closeCard(this)">✖</button>
+            <!-- Message icon (click to toggle input) -->
+               <span class="message-icon" onclick="toggleMessageInput(this)">💬</span>
+
+        </div>
+        <div class="M-2">
+          <img src="../profile/tunde.png" alt="Ngozis protrait">
+          <div class="M-text-container">
+            <h3>Tunde Adebayo</h3>
+            <p>Cold</p>
+          </div>
+          <div class="insurance-1">
+            <label>
+              <input type="checkbox" class="confirmSubmit">
+            </label>
+          </div>
+
+            <!-- Close button -->
+  <button class="close-btn" onclick="closeCard(this)">✖</button>
+            <!-- Message icon (click to toggle input) -->
+  <span class="message-icon" onclick="toggleMessageInput(this)">💬</span>
+
+
+        </div>
+        <div class="M-3">
+          <img src="../profile/Amara.png" alt="Drop">
+          <div class="M-text-container">
+            <h3>Amara Okafor</h3>
+            <p>Diabetes</p>
+          </div>
+          <div class="insurance-1">
+            <label>
+              <input type="checkbox" class="confirmSubmit">
+            </label>
+          </div>
+  <!-- Close button -->
+  <button class="close-btn" onclick="closeCard(this)">✖</button>
+
+            <span class="message-icon" onclick="toggleMessageInput(this)">💬</span>
+
+        </div>
+        <div class="M-4">
+          <img src="../profile/Amina.png" alt="liquid">
+          <div class="M-text-container">
+            <h3> Amina S</h3>
+            <p>Cold</p>
+          </div>
+          <div class="insurance-1">
+            <label>
+              <input type="checkbox" class="confirmSubmit">
+            </label>
+          </div>
+  <!-- Close button -->
+  <button class="close-btn" onclick="closeCard(this)">✖</button>
+            <span class="message-icon" onclick="toggleMessageInput(this)">💬</span>
+
+        </div>
+    </section>
+
+   <section class="review">
+<div class="progress-container">
+  <h4>Patients review</h4>
+
+  <div class="progress-row">
+    <span>Excellent</span>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 74%;"></div>
+    </div>
+  </div>
+
+  <div class="progress-row">
+    <span>Great</span>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 60%;"></div>
+    </div>
+  </div>
+
+  <div class="progress-row">
+    <span>Good</span>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 30%;"></div>
+    </div>
+  </div>
+
+  <div class="progress-row">
+    <span>Average</span>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 70%;"></div>
+    </div>
+  </div>
+</div>
+
+    </section>
+    <!-- CATEGORY NAVIGATION -->
+    <!-- Responsive button Filter for Large Screens -->
+    <section class="tabs">
+      <div class="category-nav">
+        <button class="schedule" data-category="schedule">Schedule</button>
+        <button data-category="consultation">Consultation</button>
+        <button data-category="certification">Certification</button>
+        <button data-category="profile">Profile Info</button>
+      </div>
+      <!-- Responsive Dropdown Filter for Small Screens -->
+      <div class="filter-bar">
+        <label for="category-select">Choose a category:</label>
+        <select id="category-select">
+          <option value="schedule">Schedule</option>
+          <option value="consultation">Consultation</option>
+          <option value="certification">Certification</option>
+          <option value="profile">Profile Tab</option>
+        </select>
+      </div>
+      <!-- Tab content -->
+      <div class="tab" data-category="schedule">
+    <div class="working-hours">
+      <div class="day">
+        <div class="day-name">Monday - Friday</div>
+        <div class="hours">9:00 AM – 1:00 PM, 4:00 PM – 7:00 PM</div>
+        <div class="available-slots">
+          <div class="slot">09:00 AM</div>
+          <div class="slot">09:30 AM</div>
+          <div class="slot">10:00 AM</div>
+          <div class="slot">04:00 PM</div>
+          <div class="slot">04:30 PM</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-name">Saturday</div>
+        <div class="hours">10:00 AM – 2:00 PM</div>
+        <div class="available-slots">
+          <div class="slot">10:00 AM</div>
+          <div class="slot">10:30 AM</div>
+          <div class="slot">11:00 AM</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-name">Sunday</div>
+        <div class="hours">Closed</div>
+      </div>
+    </div>
+  </div>
+      </div>
+      <div class="tab" data-category="consultation">
+    <table>
+      <thead>
+        <tr>
+          <th>Patient</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Type</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Amaka Eze</td>
+          <td>August 20, 2025</td>
+          <td>10:30 AM</td>
+          <td class="type-video">Video Call</td>
+          <td class="status-completed">Completed</td>
+        </tr>
+        <tr>
+          <td>Tunde Adebayo</td>
+          <td>August 18, 2025</td>
+          <td>2:00 PM</td>
+          <td class="type-inperson">In-person</td>
+          <td class="status-followup">Follow-up Needed</td>
+        </tr>
+        <tr>
+          <td>Amara Okafor</td>
+          <td>August 15, 2025</td>
+          <td>11:15 AM</td>
+          <td class="type-video">Video Call</td>
+          <td class="status-completed">Completed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+        </div>
+      </div>
+
+      <div class="tab" data-category="certification">
+         <div class="cert-list">
+      <div class="cert-item">
+        <div class="cert-info"><span>File:</span> MBBS_Degree.pdf</div>
+        <div class="cert-info"><span>Uploaded:</span> August 12, 2025</div>
+        <div class="cert-info"><span>Status:</span> <span class="status verified">Verified</span></div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-info"><span>File:</span> Medical_License_2025.pdf</div>
+        <div class="cert-info"><span>Uploaded:</span> August 14, 2025</div>
+        <div class="cert-info"><span>Status:</span> <span class="status pending">Pending</span></div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-info"><span>File:</span> Fellowship_Certificate.pdf</div>
+        <div class="cert-info"><span>Uploaded:</span> August 10, 2025</div>
+        <div class="cert-info"><span>Status:</span> <span class="status rejected">Rejected</span></div>
+      </div>
+    </div>
+      </div>
+      <div class="tab" data-category="profile">
+  <div class="docprofile-container">
+    <div class="docprofile-header">
+      <h2>Dr. Kelvin Smith</h2>
+    </div>
+    <div class="docprofile-info">
+      <div class="info-item">
+        <span class="info-label">Email:</span>
+        <span class="info-value">kelvin.smith@clinic.com</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Phone:</span>
+        <span class="info-value">0907 8745 857</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Speciality:</span>
+        <span class="info-value">Cardiologist</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Licence No.:</span>
+        <span class="info-value">MD-789456</span>
+      </div>
+    </div>
+  </div>
+      </div>
+
+    </section>
+  </main>
+  <!--FOOTER-->
+    <footer>
+    <div class="flex-container">
+      <section class="footer Col1">
+        <img src="../images/logo.png" alt="MediGo Logo">
+        <p>MediGo <br><span>"Your One-Stop Health Companion"</span></p>
+      </section>
+
+      <section class="footer Col2">
+        <h3>Popular Features</h3>
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/indexSignUp.html">Book Appointment</a></li>
+          <li><a href="../HTML/indexSignUp.html">Telehealth Services</a></li>
+          <li>Departments & Specialists</li>
+          <li>Contact Us</li>
+        </ul>
+      </section>
+
+      <section class="footer Col3">
+        <h3>About MediGo</h3>
+        <ul>
+          <li><a href="../HTML/about-us.html"></a>FAQ</li>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>Patient Rights</li>
+          <li>Careers</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="copyright-socials-grp">
+      <p class="copyright-p">&copy; 2025 MediGo. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#"><img src="../images/fbook.png" alt="Facebook"></a>
+        <a href="#"><img src="../images/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="../images/linkedIn.png" alt="LinkedIn"></a>
+        <a href="#"><img src="../images/x.png" alt="X"></a>
+      </div>
+    </div>
+  </footer>
+  <script src="../Scripts/docpro.js"></script>
+</body>
+
+</html>

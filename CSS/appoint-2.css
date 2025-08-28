@@ -1,0 +1,338 @@
+/*universal style*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*CSS variable*/
+:root {
+  --primary: #41E088;         /* Main primary brand color (buttons, accents, status indicators) */
+  --primary-2: #A0F0C4;       /* Lighter shade of primary (hover states, soft backgrounds) */
+  --primary-3: #D9F9E7;       /* Very light shade of primary, suitable for links or backgrounds */
+  --secondary: #41C4E0;       /* Main secondary brand color (tabs, buttons, highlights) */
+  --secondary-2: #7AD6E9;     /* Lighter shade of secondary (hover states or soft highlights) */
+  --Secondary-3: #CDEDF6;     /* Very light secondary, used for background highlights */
+  --text-dark: #000000;       /* Main body text */
+  --text2: #adabab;           /* Secondary text (placeholders, muted labels, timestamps) */
+  --text-red: #CB3939;        /* Error messages, alerts, or status indicators */
+  --background: #FDFDFD;      /* Default page background */
+  --white: #FFFFFF;           /* White backgrounds, cards, containers */
+  --accent: #EDFDFC;          /* Accent background (very light background or UI highlight) */
+  --warning:#CD6200;
+  --success:#1F9254; 
+}
+
+body {
+  font-family: "Manrope";
+  background-color: var(--background);
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+}
+
+/*HEADER*/
+header img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  height: 24px;
+  width: auto;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  z-index: 2; /* keeps it above the menu */
+  margin: 10px;
+}
+
+.hamburger span {
+  display: none;
+  width: 100%;
+  height: 4px;
+  background: black;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.4s ease;
+}
+
+/* Transform to X when checked */
+#menu-toggle:checked + .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-menu {
+  top: 60px;
+  left: 0;
+  background: var(--white);
+  padding: 10px;
+  z-index: 20;
+  font-size: 20px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-menu li {
+  z-index: 2;
+  align-items: center;
+}
+
+.nav-menu a {
+  text-decoration: none;
+}
+
+.nav-menu ul li a {
+  color: var(--text-dark);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color:var(--primary);
+}
+
+/* Show menu when checked */
+#menu-toggle:checked ~ .nav-menu {
+  display: block;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  text-align: center;
+}
+
+/* PAYMENT SECTION */
+.payment-section {
+  max-width: 1000px; /* Wider layout */
+  margin: 120px auto;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.payment-section h3 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #333;
+}
+
+/* Payment Method Icons */
+.payment-section img {
+  margin: 10px 5px;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+/* FORM STYLING */
+form {
+  margin-top: 20px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Modal background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Header image */
+.modal-header img {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.modal-footer {
+  margin-top: 20px;
+}
+
+.modal-footer button {
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-footer button:hover {
+  background-color: #0052a3;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+.logo {
+  align-items: center;
+}
+
+.hamburger {
+    display: inline-block;
+}
+
+.hamburger span {
+  display: block;
+}
+.nav-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: var(--primary-3);
+}
+
+.nav-menu li {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+
+.nav-menu ul {
+  flex-direction: column;
+  transition: max-height 0.3s ease;
+}
+}
+
+@media (max-width: 600px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .doctor-text {
+    margin-top: 20px;
+  }
+
+  .payment-section {
+    padding: 20px 15px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+header img {
+ padding: 0 10px 0 0;
+}
+
+header h1 {
+  font-size: 30px;
+}
+}
+
+@media (max-width: 300px) {
+  header img {
+  padding: 0px;
+}
+
+header h1 {
+  font-size: 25px;
+}
+
+.hamburger {
+  margin: 10px 0 10px 10px;
+}
+}

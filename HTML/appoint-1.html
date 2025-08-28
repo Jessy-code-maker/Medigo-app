@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/appoint-1.css">
+  <title>Doctor Appointment Booking</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../elements/logo.png" alt="logo">
+      <input type="checkbox" class="menu-toggle" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <!-- Nav menu -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="#">Book Appointment</a></li>
+          <li><a href="../HTML/Thealth.html">Telehealth</a></li>
+          <li><a href="../HTML/about-us.html">About Us</a></li>
+          <li><a href="../HTML/index.html">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+      <h1>Appointment Booking</h1>
+  </header>
+
+  <!-- Hero Section (Doctor Info) -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="../appoint-doctor/doctor.png" alt="Doctor Image" class="doctor-img" id="doctor-image">
+
+      <div class="doctor-text">
+        <p id="doctor-name"><strong>Dr. Kelvin Smith</strong></p>
+        <p id="doctor-specialty">Cardiology Specialist</p>
+
+        <div class="ratings">
+          <span>⭐⭐⭐⭐☆</span>
+          <span>(90)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment Form (contact + schedule + preferences all in one form) -->
+  <section>
+    <h3>Book Your Appointment</h3>
+
+    <form id="preferenceForm" method="POST" action="/submit-appointment">
+      <!-- Contact Details -->
+      <h4>Enter contact details</h4>
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Mrs Amaka" required><br><br>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="0909 344 9759" required><br><br>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="amaka@gmail.com" required><br><br>
+
+      <!-- Hidden fields set by JS -->
+      <input type="hidden" name="appointmentDate" id="appointmentDate">
+      <input type="hidden" name="appointmentTime" id="appointmentTime">
+
+      <!-- Schedule Section -->
+      <h4>Pick date for schedule</h4>
+      <div class="date-switcher">
+        <p id="selectedDate">14 August 2025</p>
+        <button class="arrow-btn" type="button">&#10094;</button> <!-- Chevron Left -->
+        <button class="arrow-btn" type="button">&#10095;</button> <!-- Chevron Right -->
+      </div>
+
+      <div class="date-btn">
+        <button type="button">Mon<br>14</button>
+        <button type="button">Tue<br>15</button>
+        <button type="button">Wed<br>16</button>
+        <button type="button">Thu<br>17</button>
+        <button type="button">Fri<br>18</button>
+        <button type="button">Sat<br>19</button>
+      </div>
+
+      <h4>Available slots</h4>
+      <div class="time-btns">
+        <button type="button">9:00AM</button>
+        <button type="button">10:00AM</button>
+        <button type="button">12:00AM</button>
+        <button type="button">3:00PM</button>
+        <button type="button">4:00PM</button>
+        <button type="button">6:00PM</button><br><br>
+        <button type="button">8:00PM</button>
+        <button type="button">7:00PM</button>
+        <button type="button">5:00AM</button>
+        <button type="button">3:00PM</button>
+      </div>
+
+      <!-- Preferences Section -->
+      <h4>Preference</h4>
+      <div class="preference-options">
+        <label>
+          <input type="checkbox" name="reminder" value="email">
+          Email Reminder
+        </label>
+        <label>
+          <input type="checkbox" name="reminder" value="sms">
+          SMS Reminder
+        </label>
+      </div>
+
+      <!-- Payment Section -->
+      <div class="totals">
+        <h3><strong>Total Price:</strong></h3>
+        <span id="total">₦15,000</span>
+        <br><br>
+        <button type="submit">Proceed to payment</button>
+      </div>
+    </form>
+  </section>
+    <footer>
+    <div class="flex-container">
+      <section class="footer Col1">
+        <img src="../images/logo.png" alt="MediGo Logo">
+        <p>MediGo <br><span>"Your One-Stop Health Companion"</span></p>
+      </section>
+
+      <section class="footer Col2">
+        <h3>Popular Features</h3>
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/indexSignUp.html">Book Appointment</a></li>
+          <li><a href="../HTML/indexSignUp.html">Telehealth Services</a></li>
+          <li>Departments & Specialists</li>
+          <li>Contact Us</li>
+        </ul>
+      </section>
+
+      <section class="footer Col3">
+        <h3>About MediGo</h3>
+        <ul>
+          <li><a href="../HTML/about-us.html"></a>FAQ</li>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>Patient Rights</li>
+          <li>Careers</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="copyright-socials-grp">
+      <p class="copyright-p">&copy; 2025 MediGo. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#"><img src="../images/fbook.png" alt="Facebook"></a>
+        <a href="#"><img src="../images/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="../images/linkedIn.png" alt="LinkedIn"></a>
+        <a href="#"><img src="../images/x.png" alt="X"></a>
+      </div>
+    </div>
+  </footer>
+  <script src="../Scripts/appoint-1.js"></script>
+</body>
+</html>

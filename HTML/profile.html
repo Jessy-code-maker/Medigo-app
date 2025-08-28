@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/profile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Profile</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><img src="../elements/logo.png" alt="logo">
+      <input type="checkbox" class="menu-toggle" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger"
+        aria-label="Toggle navigation menu"><span></span><span></span><span></span></label>
+      <!-- Nav menu -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/appoint.html">Book Appointment</a></li>
+          <li><a href="../HTML/Thealth.html">Telehealth</a></li>
+          <li><a href="../HTML/about-us.html">About Us</a></li>
+          <li><a href="../HTML/index.html">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+      <h1>My Profile</h1>
+  </header>
+  <main>
+    <section class="Profile">
+      <div class="container">
+        <div class="profile-container">
+          <img src="../profile/profile-pic.jpg" alt="Profile Picture" />
+
+          <!-- Display-only info -->
+          <div class="profile-name display-only">
+            <h3>Name</h3>
+            <p id="out-name">Mrs Amaka Eze</p>
+          </div>
+
+          <!-- Editable form -->
+          <div class="profile-name editable" style="display: none;">
+            <label for="name"><strong>Name</strong></label>
+            <input type="text" id="name" name="name" value="Mrs Amaka Eze" required />
+          </div>
+
+          <button class="profile-btn" onclick="toggleEditSave(this)">Edit Profile</button>
+        </div>
+
+        <div class="text-container">
+          <!-- Display-only data -->
+          <div class="submitted-data display-only">
+            <div>
+              <h3>Health ID</h3>
+              <p id="out-healthID">MC2345</p>
+            </div>
+            <div>
+              <h3>Gender</h3>
+              <p id="out-gender">Female</p>
+            </div>
+            <div>
+              <h3>Age</h3>
+              <p id="out-age">32</p>
+            </div>
+            <div>
+              <h3>Blood Group</h3>
+              <p id="out-bloodGroup">O+</p>
+            </div>
+          </div>
+
+          <!-- Editable fields -->
+          <div class="editable" style="display: none;">
+            <label for="health-ID"><strong>Health ID</strong></label>
+            <input type="text" id="health-ID" value="MC2345" required />
+
+            <label for="gender"><strong>Gender</strong></label>
+            <select id="gender" required>
+              <option value="" disabled>Select your Sex</option>
+              <option value="Male">Male</option>
+              <option value="Female" selected>Female</option>
+            </select>
+
+            <label for="age"><strong>Age</strong></label>
+            <input type="number" id="age" value="32" required />
+
+            <label for="bloodGroup"><strong>Blood Group</strong></label>
+            <select id="bloodGroup">
+              <option value="">Select Blood Group</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <h1>Quick Health Stat</h1>
+      <div class="h2-wrapper">
+        <h2>Patient Last Vitals</h2>
+      </div>
+      <div class="f-container">
+        <div class="f-1">
+          <h3>Glucose</h3>
+          <p class="readings">97 mg/dl</p>
+          <p class="vital-status" style="color:#41E088">In the normal</p>
+        </div>
+        <div class="f-2">
+          <h3>Cholesterol</h3>
+          <p class="readings">85 mg/dl</p>
+          <p class="vital-status" style="color:#41E088">In the normal</p>
+        </div>
+        <div class="f-3">
+          <h3>Blood pressure</h3>
+          <p class="readings">120/50 mm/gH</p>
+          <p class="vital-status" style="color:#41E088">In the normal</p>
+        </div>
+        <div class="f-4">
+          <h3>Heart Rate</h3>
+          <p class="readings">120 BPM</p>
+          <p class="vital-status" style="color:#DD2C2C">Above the normal</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="upcoming-Appointment">
+      <div class="U-App-Container">
+        <h2>Upcoming-Appointment</h2><br>
+        <div class="upcoming-list"></div>
+      </div>
+    </section>
+
+
+    <section class="Medication">
+      <div class="M-App-Container">
+        <h2>Today's Medication</h2>
+        <p class="time">08:00AM</p>
+        <div class="medication-card">
+          <img src="../medication/pill.jpg" alt="pill">
+          <div class="M-text-container">
+            <h3>Vitamin D-500IU</h3>
+            <p>Before Eating . 1 pill</p>
+            <p>14:00</p>
+          </div>
+          <div class="insurance-1">
+            <label>
+              <input type="checkbox" class="confirmSubmit">
+            </label>
+          </div>
+        </div>
+        <div class="medication-card">
+          <img src="../medication/capsule.jpg" alt="capsule">
+          <div class="M-text-container">
+            <h3>Zinc - 50mg</h3>
+            <p>Before Eating . 1 capsule</p>
+            <p>14:00</p>
+          </div>
+          <div class="insurance-1">
+            <label>
+              <input type="checkbox" class="confirmSubmit">
+            </label>
+          </div>
+        </div>
+        <p class="time">12:00AM</p>
+        <div class="medication-card">
+          <img src="../medication/Drop Pipette.png" alt="Drop">
+          <div class="M-text-container">
+            <h3>Melatonin Drops - 1mg/ml</h3>
+            <p>30 mins Before Bed · 6 drops under the tongue</p>
+            <p>22:00</p>
+          </div>
+          <div class="insurance-1">
+            <label>
+              <input type="checkbox" class="confirmSubmit">
+            </label>
+          </div>
+        </div>
+        <div class="medication-card">
+          <img src="../medication/liquid.png" alt="liquid">
+          <div class="M-text-container">
+            <h3>Ferrous Sulfate Liquid - 200mg/5ml</h3>
+            <p>After Meals · 10ml (2 teaspoons)</p>
+            <p>14:00</p>
+          </div>
+          <div class="insurance-1">
+            <label>
+              <input type="checkbox" class="confirmSubmit">
+            </label>
+          </div>
+        </div>
+    </section>
+
+    <!-- CATEGORY NAVIGATION -->
+    <section class="tabs">
+      <div class="category-nav">
+        <button class="appointment" data-category="appointment">Appointment</button>
+        <button data-category="medical-history">Medical-history</button>
+        <button data-category="prescription">Prescription</button>
+      </div>
+      <div class="filter-bar">
+        <label for="category-select">Choose a category:</label>
+        <select id="category-select">
+          <option value="appointment">Appointment</option>
+          <option value="medical-history">Medical-history</option>
+          <option value="prescription">Prescription</option>
+        </select>
+      </div>
+      <div class="tab" data-category="appointment">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th>Doctor</th>
+              <th>Specification</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Appointment rows will be inserted dynamically via JS -->
+          </tbody>
+        </table>
+      </div>
+      <div class="tab" data-category="medical-history">
+        <div class="mh-container">
+          <div class="mh-1">
+            <h3>Chronic Diease</h3>
+            <p>IHD, obesity, Chronic thyriod disorder</p>
+          </div>
+          <div class="mh-1">
+            <h3>Diabetic Emergency </h3>
+            <p>IHD, obesity, Chronic thyriod disorder</p>
+          </div>
+          <div class="mh-1">
+            <h3>Chronic Diease</h3>
+            <p>IHD, obesity, Chronic thyriod disorder</p>
+          </div>
+          <div class="mh-1">
+            <h3>Chronic Diease</h3>
+            <p>IHD, obesity, Chronic thyriod disorder</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab" data-category="prescription">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th>Medication</th>
+              <th>Dosage</th>
+              <th>Start Date</th>
+              <th>Duration</th>
+              <th>Doctor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../medication/pill.jpg" alt="pill">Metformin 500mg</td>
+              <td>Twice a day</td>
+              <td><input type="date" id="expiry-date" name="expiry-date" required></td>
+              <td>6 months</td>
+              <td>Dr. Smith</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td><img src="../medication/capsule.jpg" alt="capsule">Metformin 500mg</td>
+              <td>Twice a day</td>
+              <td><input type="date" id="expiry-date" name="expiry-date" required></td>
+              <td>6 months</td>
+              <td>Dr. Smith</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td><img src="../medication/liquid.png" alt="liquid">Metformin 500mg</td>
+              <td>Twice a day</td>
+              <td><input type="date" id="expiry-date" name="expiry-date" required></td>
+              <td>6 months</td>
+              <td>Dr. Smith</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td><img src="../medication/Drop Pipette.png" alt="Drop">Metformin 500mg</td>
+              <td>Twice a day</td>
+              <td><input type="date" id="expiry-date" name="expiry-date" required></td>
+              <td>6 months</td>
+              <td>Dr. Smith</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- Cancel Confirmation Modal -->
+    <div id="cancelModal" class="modal">
+      <div class="modal-content">
+        <p>Are you sure you want to cancel this appointment?</p>
+        <div class="modal-buttons">
+          <button id="confirmCancel" class="btn-danger">Yes, Cancel</button>
+          <button id="closeModal" class="btn-secondary">No, Keep</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <!--FOOTER-->
+  <script src="../Scripts/profile.js"></script>
+</body>
+
+</html>

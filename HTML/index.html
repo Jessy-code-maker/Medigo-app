@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="../CSS/login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="../elements/logo.png" alt="Logo" class="logo">
+  </header>
+
+  <!-- Login Form -->
+  <h1 class="login-title">Login</h1>
+  <p id="erroMsg"></p>
+  <form class="login-form">
+    <section class="login-section">
+      <div class="container-up">
+        <div class="form-group">
+
+          <input class="box" type="text" id="user_name" name="user_name" placeholder="User name">
+
+          <input class="box" type="password" id="password" name="password" placeholder="Password" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="baseform">
+        <input class="checkbox" type="checkbox" id="remember" name="remember">
+        <label for="remember"> Remember Me</label>
+
+        <h4 class="forgot-password">
+          Forgot Password? <a href="/forgot-password">Reset here</a>
+        </h4>
+
+        <button type="submit" class="login-button">Login</button>
+
+        <h4 class="register-link">
+          Don't have an account? <a href="../HTML/indexSignUp.html">Sign up</a>
+        </h4>
+      </div>
+    </section>
+  </form>
+
+  <!-- Footer -->
+  <footer>
+    <div class="flex-container">
+      <section class="footer Col1">
+        <img src="../images/logo.png" alt="MediGo Logo">
+        <p>MediGo <br><span>"Your One-Stop Health Companion"</span></p>
+      </section>
+
+      <section class="footer Col2">
+        <h3>Popular Features</h3>
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/indexSignUp.html">Book Appointment</a></li>
+          <li><a href="../HTML/indexSignUp.html">Telehealth Services</a></li>
+          <li>Departments & Specialists</li>
+          <li>Contact Us</li>
+        </ul>
+      </section>
+
+      <section class="footer Col3">
+        <h3>About MediGo</h3>
+        <ul>
+          <li><a href="../HTML/about-us.html"></a>FAQ</li>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>Patient Rights</li>
+          <li>Careers</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="copyright-socials-grp">
+      <p class="copyright-p">&copy; 2025 MediGo. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#"><img src="../images/fbook.png" alt="Facebook"></a>
+        <a href="#"><img src="../images/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="../images/linkedIn.png" alt="LinkedIn"></a>
+        <a href="#"><img src="../images/x.png" alt="X"></a>
+      </div>
+    </div>
+  </footer>
+  <script src="../Scripts/login.js"></script>
+</body>
+
+</html>

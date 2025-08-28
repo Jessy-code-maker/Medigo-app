@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Manrope" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/signup.css" />
+  <title>MediGo - Sign Up</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="../images/logo.png" alt="MediGo Logo" class="logo">
+    <h1>Sign up</h1>
+  </header>
+
+  <!-- Signup Form -->
+  <main>
+    <p id="erroMsg"></p>
+    <section class="signup-container">
+      <form class="form">
+        <!-- Role Selection -->
+        <div class="role-selection">
+          <p>Select Your Role:</p>
+          <div class="role-buttons">
+            <input type="radio" id="patient" name="role" value="Patient">
+            <label for="patient">Patient</label>
+
+            <input type="radio" id="doctor" name="role" value="Doctor">
+            <label for="doctor">Doctor</label>
+          </div>
+        </div>
+
+        <!-- Personal Information -->
+        <div class="info">
+          <div class="input-group">
+            <label for="name">Full Name: <span class="required-star">*</span></label>
+            <input type="text" id="name" name="name">
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email Address: <span class="required-star">*</span></label>
+            <input type="text" id="email" name="email">
+          </div>
+
+          <div class="input-group">
+            <label for="phone">Phone Number: <span class="required-star">*</span></label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div class="input-group">
+            <label for="password">Create Password: <span class="required-star">*</span></label>
+            <input type="text" id="password" name="password" autocomplete="new-password">
+          </div>
+
+          <div class="input-group">
+            <label for="confirm-password">Confirm Password: <span class="required-star">*</span></label>
+            <input type="text" id="confirm-password" name="confirm-password" autocomplete="new-password">
+          </div>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="terms">
+          <input type="checkbox" id="terms" name="terms">
+          <label class="termsLabel" for="terms">I agree to the <a href="/terms" target="_blank">Terms and
+              Conditions</a>.</label>
+        </div>
+
+        <!-- Sign Up Button -->
+        <button type="submit" class="signup-btn">Sign up</button>
+
+        <p class="login-text">Already have an account? <a href="../HTML/index.html">Login</a> here</p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="flex-container">
+      <section class="footer Col1">
+        <img src="../images/logo.png" alt="MediGo Logo">
+        <p>MediGo <br><span>"Your One-Stop Health Companion"</span></p>
+      </section>
+
+      <section class="footer Col2">
+        <h3>Popular Features</h3>
+        <ul>
+          <li><a href="../HTML/home.html">Home</a></li>
+          <li><a href="../HTML/indexSignUp.html">Book Appointment</a></li>
+          <li><a href="../HTML/indexSignUp.html">Telehealth Services</a></li>
+          <li>Departments & Specialists</li>
+          <li>Contact Us</li>
+        </ul>
+      </section>
+
+      <section class="footer Col3">
+        <h3>About MediGo</h3>
+        <ul>
+          <li><a href="../HTML/about-us.html"></a>FAQ</li>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>Patient Rights</li>
+          <li>Careers</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="copyright-socials-grp">
+      <p class="copyright-p">&copy; 2025 MediGo. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#"><img src="../images/fbook.png" alt="Facebook"></a>
+        <a href="#"><img src="../images/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="../images/linkedIn.png" alt="LinkedIn"></a>
+        <a href="#"><img src="../images/x.png" alt="X"></a>
+      </div>
+    </div>
+  </footer>
+  <script src="../Scripts/signup.js"></script>
+</body>
+
+</html>
