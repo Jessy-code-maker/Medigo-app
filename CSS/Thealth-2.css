@@ -178,7 +178,7 @@ header h1 {
 .container {
   max-width: 900px;
   margin: 40px auto;
-  background-color: var(--white);
+  background-color: var(--Secondary-3);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
@@ -224,7 +224,6 @@ header h1 {
   border: 1px solid var(--primary-3);
   border-radius: 8px;
   font-size: 1rem;
-  background-color: var(--accent);
   transition: border 0.3s ease;
 }
 
@@ -237,9 +236,9 @@ header h1 {
 .consultation-form input[type="button"] {
   padding: 10px 16px;
   margin-right: 10px;
-  background-color: var(--primary-3);
-  color: var(--primary);
-  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: var(--white);
+  border: 1px solid var(--white);
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
