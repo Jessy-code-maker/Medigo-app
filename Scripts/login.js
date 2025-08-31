@@ -70,7 +70,7 @@ document.querySelector(".login-form").addEventListener("submit", function (event
     //  edirects based on stored role.
     setTimeout(() => {
       if (registeredUser.role === "Doctor") {
-        window.location.href = "doctorprofile.html";
+        window.location.href = "docpro.html";
       } else {
         window.location.href = "profile.html";
       }
