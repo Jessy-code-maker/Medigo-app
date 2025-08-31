@@ -111,7 +111,7 @@ function loadAppointments() {
       { doctor: "Dr. Garcia Joseph", spec: "Medical Consultation", date: "20/08/2025", time: "14:00", status: "Upcoming", joinLink: "https://zoom.us/j/111111111" },
       { doctor: "Dr. Lee", spec: "Cardiology", date: "11/07/2025", time: "15:00", status: "Upcoming", joinLink: "https://meet.google.com/lee-123" },
       { doctor: "Dr. Smith", spec: "Dermatology", date: "05/09/2025", time: "10:30", status: "Upcoming", joinLink: "https://teams.microsoft.com/l/dermatology" },
-      { doctor: "Dr. Angela White", spec: "Neurology", date: "28/06/2025", time: "09:00", status: "Cancelled", joinLink: "https://zoom.us/j/444444444" },
+      { doctor: "Dr. Angela White", spec: "Neurology", date: "28/06/2025", time: "09:00", status: "Canceled", joinLink: "https://zoom.us/j/444444444" },
       { doctor: "Dr. Thompson", spec: "Orthopedics", date: "10/10/2025", time: "16:45", status: "Completed", joinLink: "https://meet.google.com/ortho-789" }
     ];
   }
