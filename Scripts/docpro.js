@@ -67,11 +67,14 @@
 
 // Code for handling message icon toggle and close button
     function closeCard(btn) {
-    const card = btn.closest('.M-2');
+    const card = btn.closest('.M-1, .M-2, .M-3, .M-4');
     card.style.display = 'none';
   }
 
-  function toggleMessageInput(icon) {
-    const card = icon.closest('.M-2');
-    card.classList.toggle('message-active');
-  }
+function toggleMessageInput(icon) {
+  const card = icon.closest('.M-1, .M-2, .M-3, .M-4');
+  if (!card) return;
+
+  card.classList.toggle('message-active');
+}
+

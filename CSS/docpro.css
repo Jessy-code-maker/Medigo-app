@@ -205,6 +205,7 @@ header h1 {
   padding: 20px;
   border-radius: 10px;
   justify-content: space-evenly;
+  gap: 10px;
 }
 
 .features h1 {
@@ -292,6 +293,16 @@ header h1 {
   width: 100%;
 }
 
+.image-holder img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--primary-3);
+}
+
 .U-App-btn,
 .U-App-btn-cancel {
   display: flex;
@@ -361,6 +372,7 @@ header h1 {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
+  flex-wrap: wrap;
 }
 
 .M-1 img,
@@ -456,9 +468,10 @@ header h1 {
 .M-App-Container input[type="checkbox"]:checked::after {
   content: '✔';
   color: white;
-  font-size: 14px;
+  font-size: 35px;
   font-weight: bold;
   line-height: 1;
+  background-color: var(--primary);
 }
 
 /* Background when checked */
@@ -467,6 +480,31 @@ header h1 {
   border-color: var(--primary);
 }
 
+.message-input {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.message-input input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* When active, expand the drawer */
+.message-active .message-input {
+  max-height: 100px; /* enough height to show the input */
+}
+
+input:focus {
+  outline: none;          /* Removes the default outline */
+  background-color: white; /* Removes the yellow background in some browsers */
+  box-shadow: 0 0 0 2px var(--secondary); /* Optional: add custom blue glow */
+}
 
 /*CATEGORY NAVIGATION*/
 .category-nav {
@@ -979,4 +1017,22 @@ footer a {
     flex-direction: column;
     transition: max-height 0.3s ease;
   }
+}
+
+@media (max-width: 450px) {
+.text-holder {
+  align-items: center;
+}
+
+/* Medication blocks */
+.M-1,
+.M-2,
+.M-3,
+.M-4 {
+  width: auto;
+}
+
+.container {
+  margin: auto;
+}
 }
